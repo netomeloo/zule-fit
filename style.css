@@ -1,0 +1,269 @@
+@keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+}
+    50% {
+      transform: scale(1.1);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: grey;
+    padding: 9px;
+    width: 100vw;
+    position: fixed;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.logo {
+    width: 10vw;
+    height: auto;
+    max-width: 200px;
+    padding: 10px;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-right: 10px;
+}
+
+li {
+    list-style: none;
+    font-family: "Black Ops One", system-ui;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.2);
+}
+
+.cart {
+    width: 2vw;
+}
+
+.capa {
+    height: 100vh;
+    background-image: url(https://img.freepik.com/fotos-premium/um-homem-de-camisa-branca-e-um-bone-azul-esta-de-pe-na-frente-de-um-fundo-escuro_1013369-88692.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: fill;
+
+}
+
+.slogan {
+    color: #fff;
+    font-size: 4vw;
+    font-family: "Black Ops One", system-ui;
+    word-spacing: 5px;
+    width: 50vw;
+    padding: 110px;
+    text-align: center;
+}
+
+.products-title {
+    font-family: "Black Ops One",
+    system-ui;
+    text-align: center;
+    padding: 50px;
+}
+
+.products-lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    place-items: center;
+}
+
+.product {
+    width: 20vw;
+    padding: 10px;
+    background-color: #fff;
+    border: 0,5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition:all 0.1s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.zule-fit {
+    width: 10vw;
+    transition: 0.7s;
+}
+
+.zule-fit:hover {
+    transform: scale(1.1);
+}
+
+.product-title {
+    font-size: 15px;
+}
+
+.comprar {
+    width: 70%;
+    color: #fff;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.comprar:hover {
+    background-color: rgb(38, 38, 243);
+} 
+
+.whatsapp-logo {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px; 
+    z-index: 1000;
+    animation: pulse 1.5s infinite;
+}
+  
+  .whatsapp-logo img {
+    width: 60px; 
+    height: auto;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin: 20px 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    padding-top:150px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+.copy {
+    font-family:"Black Ops One",
+    system-ui;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 110px;
+    }
+    .btn{
+        gap: 15px;
+    }
+    li {
+        font-size: 10px;
+    }
+    .cart {
+        width: 3vw;
+    }
+    .capa {
+        background-image: url(https://images.pexels.com/photos/20240048/pexels-photo-20240048/free-photo-of-homem-esporte-exercicio-academia-de-ginastica.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .slogan {
+        width: auto;
+        padding: 80px;
+        font-size: 23px;
+        word-spacing: 10px;
+    }
+    .product{
+        width: 100vw;
+        height: 50vh;
+    }
+    .zule-fit {
+        width: 40vw;
+    }
+    .products-lists {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        place-items: center;
+    }
+    .product-title {
+        font-size: 1rem;
+    }
+    .comprar {
+        width: 20vw;
+    }
+    .whatsapp-logo {
+        content: url(./assets/whatsapp\ \(2\).png);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .logo {
+        width: 110px;
+    }
+    li {
+        font-size: 20px;
+    }
+    .cart {
+        width: 2.5vw;
+    }
+    .capa {
+        height: 80vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .slogan {
+        width:70vw;
+        padding: 95px;
+        font-size: 30px;
+        word-spacing: 10px;
+    }
+    .product {
+        width: 50vw;
+    }
+    .zule-fit {
+        width: 20vw;
+    }
+    .products-lists {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        place-items: center;
+    }
+    .comprar {
+        width: 15vw;
+    }
+}
